@@ -29,10 +29,10 @@ def start():
         elif req["request"]["original_utterance"].capitalize() in ["Спасибо", "Завершить диалог"]:
             response["response"]["text"] = "Всего доброго! Приходите ещё!"
             response = {
-        "version": request.json["version"],
-        "session": request.json["session"],
-        "response": {
-            "end_session": True
+                "version": request.json["version"],
+                "session": request.json["session"],
+                "response": {
+                    "end_session": True 
         }
     }
         
