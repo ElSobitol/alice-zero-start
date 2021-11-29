@@ -16,13 +16,7 @@ def start():
             "end_session": False
         }
     }
-    response1 = {
-        "version": request.json["version"],
-        "session": request.json["session"],
-        "response": {
-            "end_session": True  
-        }
-    }
+    
     
 
     req = request.json
@@ -36,6 +30,6 @@ def start():
             response["response"]["text"] = "Стремитесь не к успеху, а к ценностям, которые он дает"
         elif req["request"]["original_utterance"].capitalize() in ["Спасибо", "Завершить диалог"]:
             response["response"]["text"] = "Всего доброго! Приходите ещё!"
-            return response1
+            
         
     return json.dumps(response)
