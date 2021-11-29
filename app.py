@@ -28,8 +28,8 @@ def start():
             response["response"]["text"] = "Очевидно, да вы все ######, вот что очевидно!"
         elif req["request"]["original_utterance"].capitalize() in ["Цитаты великих"]:
             response["response"]["text"] = "Стремитесь не к успеху, а к ценностям, которые он дает"
-        elif req["request"]["original_utterance"].capitalize() in ["Спасибо"]:
-            response["response"]["text"] = "Всего доброго! Приходите ещё!"
+#         elif req["request"]["original_utterance"].capitalize() in ["Спасибо"]:
+#             response["response"]["text"] = "Всего доброго! Приходите ещё!"
             
         
     return json.dumps(response)
