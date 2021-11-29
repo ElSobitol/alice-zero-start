@@ -26,4 +26,7 @@ def start():
             response["response"]["text"] = "Очевидно, да вы все ######, вот что очевидно!"
         elif req["request"]["original_utterance"].capitalize() in ["Цитаты великих"]:
             response["response"]["text"] = "Стремитесь не к успеху, а к ценностям, которые он дает"
+        elif req["request"]["original_utterance"].capitalize() in ["Спасибо", "Завершить диалог"]:
+            response["response"]["text"] = "Всего доброго! Приходите ещё!"
+            response["end_session"] = True        
     return json.dumps(response)
